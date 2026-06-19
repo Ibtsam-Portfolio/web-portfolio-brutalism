@@ -1,0 +1,59 @@
+/* Hallmark · tokens: brutalist-portfolio · tone: clipped, technical, direct */
+:root {
+  --color-paper: oklch(97.5% 0.01 172);
+  --color-paper-soft: oklch(91% 0.03 174);
+  --color-ink: oklch(12% 0.028 250);
+  --color-ink-muted: oklch(36% 0.035 245);
+  --color-inverse: oklch(8% 0.02 260);
+  --color-line: oklch(15% 0.03 250);
+  --color-accent: oklch(71% 0.19 170);
+  --color-accent-strong: oklch(63% 0.22 162);
+  --color-accent-hot: oklch(74% 0.17 92);
+  --color-white: oklch(100% 0 0);
+  --color-focus: oklch(78% 0.18 92);
+  --color-danger: oklch(62% 0.22 28);
+
+  --font-display: "Geist Mono", "Geist Mono Fallback", ui-monospace, SFMono-Regular, "Roboto Mono", Menlo, Monaco, "Liberation Mono", "DejaVu Sans Mono", "Courier New", monospace;
+  --font-body: "Geist Mono", "Geist Mono Fallback", ui-monospace, SFMono-Regular, "Roboto Mono", Menlo, Monaco, "Liberation Mono", "DejaVu Sans Mono", "Courier New", monospace;
+  --font-utility: "Geist Mono", "Geist Mono Fallback", ui-monospace, SFMono-Regular, "Roboto Mono", Menlo, Monaco, "Liberation Mono", "DejaVu Sans Mono", "Courier New", monospace;
+
+  --layout-max: 64rem;
+  --layout-gutter: 1.25rem;
+  --layout-gutter-lg: 2rem;
+  --bp-sm: 40rem;
+
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+  --text-8xl: 6rem;
+  --text-display: 7rem;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 120ms;
+  --dur-med: 220ms;
+  --dur-slow: 520ms;
+
+  --rule-thin: 3px;
+  --rule-thick: 6px;
+  --radius-none: 0;
+}

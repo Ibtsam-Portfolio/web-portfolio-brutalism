@@ -1,0 +1,201 @@
+- generic [active] [ref=e1]:
+  - link "Skip to contact" [ref=e2] [cursor=pointer]:
+    - /url: "#contact"
+  - banner "Primary navigation" [ref=e3]:
+    - link "Ibtsam Ishtiaq home" [ref=e4] [cursor=pointer]:
+      - /url: "#top"
+    - navigation [ref=e9]:
+      - link "Work" [ref=e10] [cursor=pointer]:
+        - /url: "#work"
+      - link "Thinking" [ref=e11] [cursor=pointer]:
+        - /url: "#thinking"
+      - link "Contact" [ref=e12] [cursor=pointer]:
+        - /url: "#contact"
+      - button "Chaos" [ref=e13] [cursor=pointer]:
+        - text: Chaos
+        - generic [ref=e14]: ⚡
+  - main [ref=e15]:
+    - region "I build digital products." [ref=e16]:
+      - paragraph [ref=e17]: Available for freelance work
+      - heading "I build digital products." [level=1] [ref=e19]:
+        - generic [ref=e20]: I build
+        - generic [ref=e21]: digital
+        - generic [ref=e22]: products.
+      - paragraph [ref=e23]: Full-stack developer and product builder. I help founders launch websites, web apps, and AI tools that are clear, fast, and genuinely worth remembering.
+      - generic [ref=e24]:
+        - link "Start a project" [ref=e25] [cursor=pointer]:
+          - /url: mailto:hello@ibtsamishtiaq.com?subject=Project%20inquiry
+          - text: Start a project
+          - generic [ref=e26]: →
+        - link "Roast my site" [ref=e27] [cursor=pointer]:
+          - /url: "#roast"
+          - text: Roast my site
+          - generic [ref=e28]: 🔥
+    - generic [ref=e30]:
+      - generic [ref=e31]: Available for freelance work
+      - generic [ref=e32]: ✺
+      - generic [ref=e33]: Websites
+      - generic [ref=e34]: ✺
+      - generic [ref=e35]: Web apps
+      - generic [ref=e36]: ✺
+      - generic [ref=e37]: AI tools
+      - generic [ref=e38]: ✺
+      - generic [ref=e39]: Redesigns
+      - generic [ref=e40]: ✺
+      - generic [ref=e41]: No generic allowed
+      - generic [ref=e42]: ✺
+      - generic [ref=e43]: Available for freelance work
+      - generic [ref=e44]: ✺
+      - generic [ref=e45]: Websites
+      - generic [ref=e46]: ✺
+      - generic [ref=e47]: Web apps
+      - generic [ref=e48]: ✺
+      - generic [ref=e49]: AI tools
+      - generic [ref=e50]: ✺
+      - generic [ref=e51]: Redesigns
+      - generic [ref=e52]: ✺
+      - generic [ref=e53]: No generic allowed
+      - generic [ref=e54]: ✺
+    - region "I build sharp interfaces for founders who refuse to look generic." [ref=e55]:
+      - paragraph [ref=e56]: // the elevator pitch, randomised
+      - heading "I build sharp interfaces for founders who refuse to look generic." [level=2] [ref=e57]:
+        - text: I build
+        - mark [ref=e58]: sharp
+        - mark [ref=e59]: interfaces
+        - text: for founders who refuse to look generic.
+      - button "⟳ Shuffle the pitch" [ref=e60] [cursor=pointer]
+    - region "What I build" [ref=e61]:
+      - heading "What I build" [level=2] [ref=e62]
+      - generic [ref=e63]:
+        - article [ref=e64]:
+          - button "01 Websites that earn trust" [expanded] [ref=e65] [cursor=pointer]:
+            - generic [ref=e66]: "01"
+            - generic [ref=e67]: −
+            - strong [ref=e68]: Websites that earn trust
+          - paragraph [ref=e69]: Marketing sites that make people believe you before they ever pick up the phone - fast, clear, and built to convert.
+        - article [ref=e70]:
+          - button "02 Web apps that feel simple" [ref=e71] [cursor=pointer]:
+            - generic [ref=e72]: "02"
+            - generic [ref=e73]: +
+            - strong [ref=e74]: Web apps that feel simple
+        - article [ref=e75]:
+          - button "03 AI tools that make sense" [ref=e76] [cursor=pointer]:
+            - generic [ref=e77]: "03"
+            - generic [ref=e78]: +
+            - strong [ref=e79]: AI tools that make sense
+        - article [ref=e80]:
+          - button "04 Redesigns that wake things up" [ref=e81] [cursor=pointer]:
+            - generic [ref=e82]: "04"
+            - generic [ref=e83]: +
+            - strong [ref=e84]: Redesigns that wake things up
+    - generic [ref=e86]:
+      - generic [ref=e87]: Good design disappears.
+      - generic [ref=e88]: ●
+      - generic [ref=e89]: Fast beats fancy.
+      - generic [ref=e90]: ●
+      - generic [ref=e91]: Simple is the hard part.
+      - generic [ref=e92]: ●
+      - generic [ref=e93]: Experiences outlast features.
+      - generic [ref=e94]: ●
+      - generic [ref=e95]: Good design disappears.
+      - generic [ref=e96]: ●
+      - generic [ref=e97]: Fast beats fancy.
+      - generic [ref=e98]: ●
+      - generic [ref=e99]: Simple is the hard part.
+      - generic [ref=e100]: ●
+      - generic [ref=e101]: Experiences outlast features.
+      - generic [ref=e102]: ●
+    - region "Selected work" [ref=e103]:
+      - heading "Selected work" [level=2] [ref=e104]
+      - generic [ref=e105]:
+        - article [ref=e106]:
+          - button "01 The Quiet Dashboard" [ref=e107] [cursor=pointer]:
+            - generic [ref=e108]: "01"
+            - strong [ref=e109]: The Quiet Dashboard
+            - generic [ref=e110]: +
+          - generic:
+            - paragraph: "A command center concept for teams who need signal, not decoration: dense metrics, clear alerts, and calmer decisions."
+        - article [ref=e111]:
+          - button "02 First Impression" [ref=e112] [cursor=pointer]:
+            - generic [ref=e113]: "02"
+            - strong [ref=e114]: First Impression
+            - generic [ref=e115]: +
+          - generic:
+            - paragraph: A launch-ready portfolio and services page tuned for fast scanning, strong hierarchy, and direct inquiry flow.
+        - article [ref=e116]:
+          - button "03 The Honest Machine" [ref=e117] [cursor=pointer]:
+            - generic [ref=e118]: "03"
+            - strong [ref=e119]: The Honest Machine
+            - generic [ref=e120]: +
+          - generic:
+            - paragraph: An AI assistant interface that shows its work, asks fewer vague questions, and keeps users in control.
+        - article [ref=e121]:
+          - button "04 Common Ground" [ref=e122] [cursor=pointer]:
+            - generic [ref=e123]: "04"
+            - strong [ref=e124]: Common Ground
+            - generic [ref=e125]: +
+          - generic:
+            - paragraph: A community site system with modular sections, editorial rhythm, and simple content updates.
+    - region "How I think" [ref=e126]:
+      - heading "How I think" [level=2] [ref=e127]
+      - generic [ref=e128]:
+        - article [ref=e129]:
+          - text: "01"
+          - heading "I care about the details nobody asks for." [level=3] [ref=e130]
+          - paragraph [ref=e131]: The 1% you can't quite name is the 1% everybody feels. I live there.
+        - article [ref=e132]:
+          - text: "02"
+          - heading "I obsess over how it feels, not just how it looks." [level=3] [ref=e133]
+          - paragraph [ref=e134]: Beautiful is table stakes. The win is when something feels effortless to use.
+        - article [ref=e135]:
+          - text: "03"
+          - heading "I'd rather build something memorable than something trendy." [level=3] [ref=e136]
+          - paragraph [ref=e137]: Trends age in a season. A site people remember keeps working for years.
+        - article [ref=e138]:
+          - text: "04"
+          - heading "I work like a partner, not a vendor." [level=3] [ref=e139]
+          - paragraph [ref=e140]: I ask why we're building this - and I'll tell you when I think we shouldn't.
+    - region "Drag stuff around" [ref=e141]:
+      - heading "Drag stuff around" [level=2] [ref=e142]
+      - paragraph [ref=e143]: // because static is boring. grab the stickers.
+      - generic "Draggable sticker board" [ref=e144]:
+        - button "Drag me →" [ref=e145]
+        - button "No templates" [ref=e146]
+        - button "100% human" [ref=e147]
+        - button "Ship it" [ref=e148]
+        - button "Details > vibes" [ref=e149]
+        - button "Fast beats fancy" [ref=e150]
+    - region "Roast my site" [ref=e151]:
+      - paragraph [ref=e152]: // the side quest
+      - heading "Roast my site" [level=2] [ref=e153]: Roast my site 🔥
+      - paragraph [ref=e154]: Paste any URL and watch me tear it apart, line by line - then offer to fix it. Free brutality. Click to play.
+      - generic [ref=e155]:
+        - generic [ref=e156]: Website URL
+        - textbox "Website URL" [ref=e157]:
+          - /placeholder: https://your-site.com
+        - button "Roast it" [ref=e158] [cursor=pointer]:
+          - text: Roast it
+          - generic [ref=e159]: →
+      - status
+  - contentinfo [ref=e160]:
+    - generic [ref=e161]:
+      - heading "Let's build something." [level=2] [ref=e162]:
+        - text: Let's
+        - generic [ref=e163]: build
+        - text: something.
+      - paragraph [ref=e164]: Open for 1-2 projects this quarter. Tell me what you're making - or just say hi.
+      - generic [ref=e165]:
+        - generic [ref=e166]: Project note
+        - textbox "Project note" [ref=e167]:
+          - /placeholder: Tell me what you want to build
+        - button "Email" [ref=e168] [cursor=pointer]:
+          - text: Email
+          - generic [ref=e169]: →
+        - link "LinkedIn" [ref=e170] [cursor=pointer]:
+          - /url: https://www.linkedin.com/
+          - text: LinkedIn
+          - generic [ref=e171]: →
+      - generic [ref=e172]:
+        - generic [ref=e173]: Ibtsam Ishtiaq - full-stack developer & AI product builder
+        - link "Roast a site →" [ref=e174] [cursor=pointer]:
+          - /url: "#roast"
