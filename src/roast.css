@@ -1,0 +1,320 @@
+.roast-page {
+  min-height: 100vh;
+  color: #000;
+  background: var(--color-paper, #fff);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.roast-shell {
+  width: 100%;
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+@media (min-width: 640px) {
+  .roast-shell {
+    padding: 4rem 2rem 4.5rem;
+  }
+}
+
+.roast-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 3px solid #000;
+  padding-bottom: 0.75rem;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 640px) {
+  .roast-topbar {
+    font-size: 0.75rem;
+  }
+}
+
+.roast-topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.roast-topbar-actions a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.roast-chaos-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #000;
+  background: #fff;
+  padding: 0.35rem 0.75rem;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  line-height: 1;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 5px 5px 0 #000;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.roast-chaos-button.is-active {
+  background: var(--color-accent, #ff2d1a);
+}
+
+.roast-chaos-button:hover,
+.roast-chaos-button:focus-visible {
+  transform: translate(-2px, -2px);
+  background: #000;
+  color: #fff;
+}
+
+.roast-chaos-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0 #000;
+}
+
+.roast-hero {
+  position: relative;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .roast-hero {
+    margin-top: 3.5rem;
+  }
+}
+
+.roast-badge {
+  position: absolute;
+  top: 0;
+  right: -0.25rem;
+  transform: rotate(6deg);
+  border: 3px solid #000;
+  background: var(--color-accent, #ff2d1a);
+  box-shadow: 5px 5px 0 #000;
+  padding: 0.25rem 0.75rem;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 640px) {
+  .roast-badge {
+    font-size: 0.75rem;
+  }
+}
+
+.roast-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 16vw;
+  font-weight: 900;
+  line-height: 0.82;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 640px) {
+  .roast-title {
+    font-size: 6rem;
+  }
+}
+
+.roast-copy {
+  max-width: 36rem;
+  margin: 1.5rem 0 0;
+  border-left: 6px solid #000;
+  padding-left: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.625;
+}
+
+@media (min-width: 640px) {
+  .roast-copy {
+    font-size: 1rem;
+  }
+}
+
+.roast-form {
+  margin-top: 2.5rem;
+}
+
+.roast-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.roast-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .roast-form-row {
+    flex-direction: row;
+  }
+}
+
+.roast-input {
+  width: 100%;
+  border: 3px solid #000;
+  background: #fff;
+  padding: 1rem 1.25rem;
+  box-shadow: 6px 6px 0 #000;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.roast-input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.roast-submit {
+  flex-shrink: 0;
+  border: 3px solid #000;
+  background: #000;
+  padding: 1rem 1.75rem;
+  box-shadow: 6px 6px 0 var(--color-accent, #ff2d1a);
+  color: #fff;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.roast-note {
+  margin: 0.75rem 0 0;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.roast-stage {
+  min-height: 1.5rem;
+  margin-top: 1.25rem;
+  white-space: pre-wrap;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.roast-result {
+  margin-top: 1.5rem;
+}
+
+.roast-result-inner {
+  border: 3px solid #000;
+  background: #fff;
+  box-shadow: 8px 8px 0 #000;
+  padding: 1.5rem;
+}
+
+.roast-meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.roast-domain {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  word-break: break-word;
+}
+
+.roast-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.roast-score,
+.roast-grade,
+.roast-mode {
+  border: 1px solid #000;
+  background: var(--color-accent, #ff2d1a);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.roast-card {
+  margin-top: 1rem;
+  border: 1px solid #000;
+  background: #fff;
+  padding: 1rem;
+}
+
+.roast-text {
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.roast-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.roast-action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+  background: #fff;
+  padding: 0.5rem 0.9rem;
+  color: #000;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.roast-action-secondary {
+  margin-left: 0;
+}
+
+.roast-footer {
+  margin-top: 4rem;
+  border-top: 3px solid #000;
+  padding-top: 0.75rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}

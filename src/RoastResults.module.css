@@ -1,0 +1,327 @@
+/* Brutalist roast results — black/white only by default. No orange.
+   When chaos is on, the accent color comes from the live chaos palette
+   via inline styles. The --hot variable only ever points to the chaos
+   accent when chaos is on; when chaos is off, the section stays clean
+   black/white (no orange). */
+
+.results {
+  --ink: #000;
+  --paper: #fff;
+  --hot: var(--color-accent, transparent);
+  --font-head: "Anton", "Impact", "Arial Black", sans-serif;
+  --font-body: "Space Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+}
+
+/* When chaos is on, derive ink/paper from the chaos palette.
+   When chaos is off, the page stays black/white (no orange). */
+:global(.is-chaos) .results {
+  --ink: var(--color-inverse, #000);
+  --paper: var(--color-paper, #fff);
+  --hot: var(--color-accent, transparent);
+}
+
+/* ---------- 1. HEADLINE ---------- */
+.headline {
+  font-family: var(--font-head);
+  font-weight: 400;
+  font-size: clamp(2rem, 6vw, 4.25rem);
+  line-height: 0.95;
+  letter-spacing: 0.005em;
+  margin: 0 0 1.5rem 0;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.urlPill {
+  display: inline-block;
+  background: var(--hot);
+  color: var(--paper);
+  padding: 0.05em 0.35em;
+  margin: 0 0.1em;
+  white-space: nowrap;
+}
+
+/* ---------- 2. SCORE CARD ---------- */
+.scoreCard {
+  display: flex;
+  flex-direction: row;
+  border: 3px solid var(--ink);
+  margin-bottom: 1rem;
+}
+
+.scoreLeft,
+.scoreRight {
+  flex: 1 1 50%;
+  padding: 1.5rem 1.5rem;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.scoreLeft {
+  background: var(--paper);
+  color: var(--ink);
+  border-right: 3px solid var(--ink);
+}
+
+.scoreRight {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.scoreLabel {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  margin-bottom: 0.5rem;
+}
+
+.scoreNumber {
+  font-family: var(--font-head);
+  font-size: clamp(3.5rem, 9vw, 6rem);
+  line-height: 0.9;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.scoreDenom {
+  font-family: var(--font-body);
+  font-size: 0.4em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-left: 0.15em;
+  vertical-align: 0.55em;
+}
+
+.ratingWord {
+  font-family: var(--font-head);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 0.95;
+  color: var(--hot);
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+  text-transform: none;
+  color: var(--paper);
+}
+
+/* ---------- 3. METRIC GRID ---------- */
+.metricGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border: 3px solid var(--ink);
+  border-bottom: none;
+  margin-bottom: 1rem;
+}
+
+.metricCard {
+  border-bottom: 3px solid var(--ink);
+  padding: 1rem 1.25rem 1.1rem 1.25rem;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.metricCard:nth-child(odd) {
+  border-right: 3px solid var(--ink);
+}
+
+.metricHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  gap: 0.5rem;
+}
+
+.metricName {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+}
+
+.metricScore {
+  font-family: var(--font-head);
+  font-size: 1.6rem;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.barTrack {
+  height: 8px;
+  background: oklch(90% 0 0);
+  border: 1.5px solid var(--ink);
+  margin-bottom: 0.6rem;
+}
+
+:global(.is-chaos) .barTrack {
+  background: color-mix(in oklch, var(--color-accent, transparent) 18%, var(--color-paper, #fff));
+  border-color: var(--color-line, #000);
+}
+
+.barFill {
+  height: 100%;
+  background: var(--hot);
+}
+
+.metricLine {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  margin: 0;
+  text-transform: none;
+  color: var(--ink);
+}
+
+/* ---------- 4. FINAL VERDICT ---------- */
+.verdict {
+  background: var(--hot);
+  color: var(--paper);
+  border: 3px solid var(--ink);
+  padding: 1.5rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.verdictLabel {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  margin-bottom: 0.5rem;
+}
+
+.verdictText {
+  font-family: var(--font-head);
+  font-weight: 400;
+  font-size: clamp(1.4rem, 3.5vw, 2.25rem);
+  line-height: 1.05;
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--paper);
+}
+
+/* ---------- 5. CTA BOX ---------- */
+.ctaBox {
+  border: 3px solid var(--ink);
+  background: var(--paper);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--ink);
+}
+
+.ctaHeading {
+  font-family: var(--font-head);
+  font-weight: 400;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  line-height: 1;
+  margin: 0 0 1rem 0;
+  color: var(--ink);
+}
+
+.ctaButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.ctaPrimary,
+.ctaSecondary {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.85rem 1.4rem;
+  border: 3px solid var(--ink);
+  transition: none;
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.ctaPrimary {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.ctaPrimary:hover,
+.ctaPrimary:focus-visible {
+  background: var(--hot);
+  color: var(--paper);
+  border-color: var(--ink);
+  outline: none;
+}
+
+.ctaSecondary {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.ctaSecondary:hover,
+.ctaSecondary:focus-visible {
+  background: var(--ink);
+  color: var(--paper);
+  outline: none;
+}
+
+/* ---------- 6. ROAST ANOTHER ---------- */
+.roastAnother {
+  display: block;
+  width: 100%;
+  background: var(--paper);
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+
+.roastAnother:hover,
+.roastAnother:focus-visible {
+  background: var(--ink);
+  color: var(--paper);
+  outline: none;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 640px) {
+  .scoreCard {
+    flex-direction: column;
+  }
+  .scoreLeft {
+    border-right: none;
+    border-bottom: 3px solid var(--ink);
+  }
+  .metricGrid {
+    grid-template-columns: 1fr;
+  }
+  .metricCard:nth-child(odd) {
+    border-right: none;
+  }
+  .scoreLeft,
+  .scoreRight {
+    min-height: 110px;
+    padding: 1.25rem;
+  }
+}

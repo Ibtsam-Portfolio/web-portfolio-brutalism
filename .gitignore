@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.vercel/
+*.log
+.env
+api/server.log
+.env.local
+.DS_Store
+.commandcode/
+.vite/
+.cache/
+coverage/
