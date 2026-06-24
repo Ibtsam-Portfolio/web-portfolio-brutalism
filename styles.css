@@ -753,6 +753,358 @@ mark {
   line-height: 1.625;
 }
 
+.what-do-section {
+  --what-bg: var(--color-paper);
+  --what-accent: var(--color-accent);
+  --what-dark: var(--color-line);
+  --what-panel-dark: var(--color-inverse);
+  --what-selected-bg: var(--color-accent);
+  --what-hover-bg: var(--color-accent);
+  --what-white: var(--color-white);
+  --what-muted: color-mix(in oklch, var(--color-line) 54%, transparent);
+  --what-red: #e64848;
+  background: var(--what-bg);
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+body.is-chaos .what-do-section {
+  --what-bg: var(--color-paper);
+  --what-accent: var(--color-accent);
+  --what-dark: var(--color-line);
+  --what-panel-dark: var(--color-inverse);
+  --what-selected-bg: var(--color-accent);
+  --what-hover-bg: var(--color-accent);
+  --what-muted: color-mix(in oklch, var(--color-line) 58%, transparent);
+}
+
+.what-do-section .section-title,
+.what-do-section .section-note,
+.what-do-topline,
+.choice-button,
+.match-line,
+.reveal-panel h4,
+.quiz-next,
+.score-card h3 {
+  font-family: var(--font-body);
+}
+
+.what-do-section .section-title {
+  color: var(--what-dark);
+  font-family: var(--font-display);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.what-do-section .section-note {
+  color: var(--what-muted);
+  font-weight: 900;
+  letter-spacing: 0.18em;
+}
+
+.what-do-card,
+.score-card {
+  border: 2px solid var(--what-dark);
+  border-radius: 0;
+  background: var(--what-white);
+  color: var(--what-dark);
+  box-shadow: none;
+  padding: 1.5rem;
+}
+
+.what-do-topline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+  font-size: var(--text-xs);
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.question-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3rem;
+  min-height: 2.35rem;
+  border: 2px solid var(--what-dark);
+  border-radius: 0;
+  background: var(--what-accent);
+  color: var(--what-dark);
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.question-count {
+  color: var(--what-muted);
+}
+
+.what-do-question {
+  margin: 0 0 1.5rem;
+  color: var(--what-dark);
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border: 2px solid var(--what-dark);
+  border-radius: 0;
+  background: var(--what-white);
+}
+
+.choice-button {
+  min-height: 10rem;
+  border: 0;
+  border-radius: 0;
+  background: var(--what-white);
+  color: var(--what-dark);
+  padding: 1.25rem;
+  text-align: left;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out), opacity var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+
+.choice-button:disabled {
+  cursor: default;
+}
+
+.choice-button + .choice-button {
+  border-left: 2px solid var(--what-dark);
+}
+
+.choice-button span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+  border: 2px solid var(--what-dark);
+  background: var(--what-accent);
+  color: var(--what-dark);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.choice-button strong {
+  display: block;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+.choice-button:hover,
+.choice-button:focus-visible {
+  background: var(--what-hover-bg);
+  color: var(--what-dark);
+  transform: none;
+}
+
+.choice-button:hover span,
+.choice-button:focus-visible span {
+  background: var(--what-white);
+  color: var(--what-dark);
+}
+
+.choice-button.is-selected {
+  background: var(--what-selected-bg);
+  color: var(--what-dark);
+  box-shadow: inset 0 -8px 0 var(--what-accent);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.choice-button.is-selected:hover,
+.choice-button.is-selected:focus-visible {
+  background: var(--what-selected-bg);
+  color: var(--what-dark);
+}
+
+.choice-button.is-selected span {
+  background: var(--what-panel-dark);
+  color: var(--what-accent);
+}
+
+.choice-button.is-dimmed {
+  opacity: 0.35;
+}
+
+.choice-button.is-dimmed:hover,
+.choice-button.is-dimmed:focus-visible {
+  background: var(--what-white);
+  opacity: 0.35;
+}
+
+.reveal-panel {
+  max-height: 0;
+  overflow: hidden;
+  border: 0 solid var(--what-dark);
+  background: var(--what-panel-dark);
+  color: var(--what-bg);
+  transition: max-height var(--dur-med) var(--ease-out), border-width var(--dur-med) var(--ease-out), padding var(--dur-med) var(--ease-out);
+}
+
+.reveal-panel.is-open {
+  max-height: 28rem;
+  border-width: 0 2px 2px;
+  padding: 1.5rem;
+}
+
+.match-line {
+  margin: 0 0 0.75rem;
+  font-size: var(--text-xs);
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.match-line.is-match {
+  color: var(--what-accent);
+}
+
+.match-line.is-miss {
+  color: var(--what-red);
+}
+
+.reveal-panel h4 {
+  margin: 0;
+  color: var(--what-bg);
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-family: var(--font-display);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+.reveal-panel mark {
+  border: 2px solid var(--what-dark);
+  background: var(--what-accent);
+  color: var(--what-dark);
+}
+
+.reveal-panel p:last-child {
+  margin: 1rem 0 0;
+  max-width: 62ch;
+  color: color-mix(in srgb, var(--what-bg) 72%, transparent);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.quiz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.progress-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.progress-dots span {
+  display: block;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 2px solid #0a0a0a;
+  border-radius: 0;
+  background: transparent;
+}
+
+.progress-dots span.is-done {
+  background: var(--color-accent);
+}
+
+.progress-dots span.is-current {
+  background: #0a0a0a;
+}
+
+.quiz-next {
+  border: 2px solid var(--what-dark);
+  border-radius: 0;
+  background: var(--what-panel-dark);
+  color: var(--what-bg);
+  padding: 0.85rem 1.25rem;
+  font-size: var(--text-sm);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.quiz-next:hover,
+.quiz-next:focus-visible {
+  background: var(--what-accent);
+  color: var(--what-dark);
+}
+
+.quiz-next-green {
+  margin-top: 1.25rem;
+  background: var(--what-accent);
+  color: var(--what-dark);
+}
+
+.score-card {
+  padding: 1.75rem;
+}
+
+.score-card .section-note {
+  margin-top: 1.25rem;
+}
+
+.score-card h3 {
+  margin: 1rem 0 0;
+  color: var(--what-dark);
+  font-size: clamp(4rem, 14vw, 8rem);
+  font-family: var(--font-display);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.score-verdict {
+  margin: 1rem 0 0;
+  max-width: 40rem;
+  color: var(--what-dark);
+  font-size: clamp(1.25rem, 4vw, 2rem);
+  font-family: var(--font-display);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+.score-verdict-badge {
+  display: inline-block;
+  margin: 0 0.35em 0.2em 0;
+  border: 2px solid var(--what-dark);
+  background: var(--what-accent);
+  color: var(--what-dark);
+  padding: 0.08em 0.22em;
+  line-height: 1;
+}
+
 .drag-board {
   position: relative;
   min-height: 340px;
@@ -1180,6 +1532,10 @@ input::placeholder {
 
   .thought-card h3 {
     font-size: var(--text-4xl);
+  }
+
+  .what-do-question {
+    font-size: var(--text-6xl);
   }
 
   .drag-board {

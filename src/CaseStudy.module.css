@@ -1,0 +1,464 @@
+/* Brutalist case study page — minimal, high contrast, grid-based.
+   Uses the existing design tokens from tokens.css */
+
+/* ---------- HERO ---------- */
+.hero {
+  --ink: #000;
+  --paper: #fff;
+  --hot: var(--color-accent, transparent);
+  --font-head: "Anton", "Impact", "Arial Black", sans-serif;
+  --font-body: "Space Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  padding: 2rem 1.25rem;
+  background: var(--paper);
+  border-bottom: 3px solid var(--ink);
+}
+
+.heroContent {
+  max-width: var(--layout-max, 64rem);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.backLink {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.backLink:hover,
+.backLink:focus-visible {
+  color: var(--hot);
+  outline: none;
+  text-decoration: underline;
+}
+
+.heroInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: baseline;
+}
+
+.heroRole {
+  font-family: var(--font-body);
+  font-weight: 900;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.heroMeta {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.heroTitle {
+  font-family: var(--font-head);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 8vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0;
+}
+
+.heroImage {
+  max-width: var(--layout-max, 64rem);
+  margin-inline: auto;
+  border: 3px solid var(--ink);
+  box-shadow: 8px 8px 0 var(--ink);
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+
+.heroImageImg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- SECTIONS ---------- */
+.section {
+  padding: 2rem 1.25rem;
+  border-bottom: 3px solid var(--ink);
+}
+
+.sectionShell {
+  max-width: var(--layout-max, 64rem);
+  margin-inline: auto;
+}
+
+.sectionLabel {
+  font-family: var(--font-body);
+  font-weight: 900;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+.sectionText {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---------- SOLUTION ---------- */
+.solutionList {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.solutionItem {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.solutionNumber {
+  font-family: var(--font-head);
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--hot);
+}
+
+.solutionText {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ---------- FEATURES ---------- */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border: 3px solid var(--ink);
+  margin-top: 0.5rem;
+}
+
+.featureCard {
+  border-bottom: 3px solid var(--ink);
+  padding: 1.5rem 1.5rem;
+  background: var(--paper);
+  color: var(--ink);
+  transition: none;
+}
+
+.featureCard:last-child {
+  border-bottom: none;
+}
+
+.featureName {
+  font-family: var(--font-head);
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  line-height: 1;
+  font-weight: 400;
+  margin: 0 0 0.5rem 0;
+  color: var(--ink);
+}
+
+.featureDesc {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ---------- TECH STACK ---------- */
+.techTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.techTag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 900;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border: 3px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.techTag:hover,
+.techTag:focus-visible {
+  background: var(--ink);
+  color: var(--paper);
+  outline: none;
+}
+
+/* ---------- RESULTS ---------- */
+.resultsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  border: 3px solid var(--ink);
+  padding: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.resultItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.resultValue {
+  font-family: var(--font-head);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 0.95;
+  font-weight: 400;
+  color: var(--hot);
+}
+
+.resultLabel {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.quoteBlock {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border: 3px solid var(--ink);
+  background: var(--paper);
+}
+
+.quoteText {
+  font-family: var(--font-head);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  line-height: 1.1;
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+  color: var(--ink);
+}
+
+.quoteCite {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  display: block;
+}
+
+.quoteRole {
+  font-weight: 700;
+  color: var(--ink-muted);
+  margin-left: 0.5rem;
+}
+
+/* ---------- VISUALS ---------- */
+.visualsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border: 3px solid var(--ink);
+  margin-top: 0.5rem;
+}
+
+.visualItem {
+  border-bottom: 3px solid var(--ink);
+}
+
+.visualItem:last-child {
+  border-bottom: none;
+}
+
+.visualImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- CLIENT QUOTE ---------- */
+.clientQuote {
+  padding: 2rem 1.5rem;
+  border: 3px solid var(--ink);
+  background: var(--paper);
+}
+
+.clientQuoteText {
+  font-family: var(--font-head);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  line-height: 1.1;
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+  color: var(--ink);
+}
+
+.clientCite {
+  font-family: var(--font-body);
+  font-weight: 900;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink);
+  display: block;
+}
+
+.clientQuoteRole {
+  font-weight: 900;
+  color: var(--ink-muted);
+  margin-left: 0.5rem;
+}
+
+/* ---------- CTA ---------- */
+.ctaSection {
+  padding: 3rem 1.25rem;
+  background: var(--ink);
+  color: var(--paper);
+  border-bottom: 3px solid var(--ink);
+}
+
+.ctaTitle {
+  font-family: var(--font-head);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  line-height: 1.05;
+  font-weight: 400;
+  margin: 0 0 1.5rem 0;
+  color: var(--paper);
+}
+
+.ctaButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.ctaButtons .button {
+  flex: 1 1 auto;
+}
+
+/* ---------- CONTACT SECTION ---------- */
+.contactSection {
+  padding: 3rem 1.25rem;
+  background: var(--paper);
+  color: var(--ink);
+  border-bottom: 3px solid var(--ink);
+}
+
+.contactInner {
+  max-width: var(--layout-max, 64rem);
+  margin-inline: auto;
+}
+
+.contactLine {
+  font-family: var(--font-head);
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+  font-weight: 400;
+  color: var(--ink);
+  margin-right: 0.5rem;
+}
+
+.contactLine.outlineWord {
+  -webkit-text-stroke: 2px var(--ink);
+  text-stroke: 2px var(--ink);
+  color: transparent;
+}
+
+.contactSection p {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 1.5rem 0 1.5rem 0;
+  color: var(--ink);
+}
+
+.ctaGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  margin: 2rem 0;
+}
+
+.contactEmailWrap {
+  display: flex;
+  width: 100%;
+}
+
+.contactEmailButton {
+  width: 100%;
+  background: var(--ink);
+  color: var(--paper);
+  border: 3px solid var(--ink);
+  font-family: var(--font-body);
+  font-weight: 900;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+
+.contactEmailButton:hover {
+  background: var(--hot);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+.contactLink {
+  display: block;
+  background: var(--paper);
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  font-family: var(--font-body);
+  font-weight: 900;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+}
+
+.contactLink:hover,
+.contactLink:focus-visible {
+  background: var(--ink);
+  color: var(--paper);
+  outline: none;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 640px) {
+  .resultsGrid {
+    grid-template-columns: 1fr;
+  }
+}

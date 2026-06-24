@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { SiteFooter, SiteHeader } from "./SiteChrome";
+import WhatIWouldDo  from "./WhatIWouldDo";
 
 const pitches = [
   ["sharp", "interfaces"],
-  ["calm", "web apps"],
+  ["calm", "web apps"], 
   ["useful", "AI tools"],
   ["fast", "launches"],
   ["memorable", "systems"],
@@ -555,7 +556,7 @@ export default function App() {
             </article>
           </div>
         </section>
-
+        <WhatIWouldDo />
         <section className="section-shell section-spaced-end" aria-labelledby="drag-title">
           <h2 className="section-title" id="drag-title">Drag stuff around</h2>
           <p className="section-note">// because static is boring. grab the stickers.</p>
@@ -572,7 +573,7 @@ export default function App() {
         <section className="section-shell section-spaced-end" id="roast" aria-labelledby="roast-title">
           <a className="roast-panel roast-panel-link" href="/roast" aria-label="Roast my site">
             <p className="section-note">// the side quest</p>
-            <h2 id="roast-title">Roast my site <span aria-hidden="true">🔥</span></h2>
+            <h2 id="drag-title">Roast my site <span aria-hidden="true">🔥</span></h2>
             <p>Paste any URL and watch me tear it apart, line by line — then offer to fix it. Free brutality. Click to play →</p>
           </a>
         </section>
